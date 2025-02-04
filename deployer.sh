@@ -11,7 +11,7 @@ log() {
 fail() {
   local code=${2:-1}
   log "$1"
-  log "Exiting with code $code"
+  # log "Exiting with code $code"
   exit $code
 }
 
@@ -32,5 +32,5 @@ if [ ! -f "deploy.sh" ]; then
 fi
 
 log "Running deploy script"
-./deploy.sh
+sudo ./deploy.sh
 exit $?
